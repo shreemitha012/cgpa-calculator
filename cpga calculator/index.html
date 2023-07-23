@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GPA Calculator</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-items">
+                <button class="nav-links" id="sem1Btn">1st Semester</button>
+            </li>
+            <li class="nav-items">
+                <button class="nav-links" id="sem2Btn">2nd Semester</button>
+            </li>
+            <li class="nav-items">
+                <button class="nav-links" id="sem3Btn">3rd Semester</button>
+            </li>
+            <li class="nav-items">
+                <button class="nav-links" id="sem4Btn">4th Semester</button>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div id="welMsg">
+        <p>Welcome</p><p>To</p><p>KSR COLLEGE</p>
+    </div>
+
+    <div id="semSubGrade">
+        <table>
+            <tbody id="semester1" class="subGrade">
+            </tbody>
+            <tbody id="semester2" class="subGrade">
+            </tbody>
+            <tbody id="semester3" class="subGrade">
+            </tbody>
+            <tbody id="semester4" class="subGrade">
+            </tbody>
+        </table>
+        <button class="semBtn" id="calculate">Calculate</button>
+        <div>
+            <h3>SGPA =<span id="sgpaDisp"> 0.00</span></h3>
+            <h3>CGPA =<span id="cgpaDisp"> 0.00</span></h3>
+        </div>
+    </div>
+    <footer>KSR COLLEGE &copy; 2022</footer>
+    <script src="script.js"></script>
+</body>
+</html>

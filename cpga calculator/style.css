@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links, button{
+    cursor: pointer;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    border-left: none;
+}
+
+header h1{
+    font-size: 1.9rem;
+    color: white;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0.5rem 0;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+    gap: 3rem;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.nav-links{
+    color: white;
+    transition: 0.1s ease;
+    font-size: 1.15rem;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.nav-links:hover{
+    color: blueviolet;
+    background-color: transparent;
+}
+
+.active{
+    color: blueviolet;
+    background-color: transparent;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgba(137, 43, 226, 0.705);
+    box-shadow: none;
+}
+
+#welMsg{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#welMsg p{
+    text-align: center;
+    color: blueviolet;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+#semSubGrade{
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+table{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: auto;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+}
+
+.semester2{
+    display: none;
+}
+.semester3{
+    display: none;
+}
+.semester4{
+    display: none;
+}
+
+input{
+    width: 10rem;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    font-size: .9rem;  
+    padding: 0.5rem 1rem;  
+}
+tr,th,td{
+    width: 10rem;
+    font-size: .9rem;
+    padding: 0.2rem 1rem;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+th{
+    font-size: 1rem;
+    color: white;
+    background-color: blueviolet;
+    padding: 0.5rem;
+}
+
+#calculate{
+    width: 12rem;
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: rgba(137, 43, 226, 1);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#calculate:hover{
+    background-color: rgba(137, 43, 226, 0.801);
+    box-shadow: none;
+}
+
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+footer{
+    height: 6%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .semButtons{
+        flex-direction: column;
+    }
+
+    .navbar{
+        justify-content: right;
+    }
+
+    #welMsg p{
+        font-size: 2.5rem;
+    }
+
+    footer{
+        margin-top: 0.5rem;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        text-align: center;
+        transition: 0.3s ease;
+        gap: 0;
+    }
+    
+    .nav-items{
+        padding: 1rem 0;
+
+    }
+
+    .hamburger{
+        display: block;
+        margin-right:  1.5rem;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.3s ease;
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+  
